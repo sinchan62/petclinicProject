@@ -3,6 +3,7 @@ FROM openjdk:17-jdk-alpine
 
 # Set the working directory in the container
 WORKDIR /app
+RUN ./mvnw package
 
 # Copy the packaged Spring Boot JAR into the container
 COPY target/*.jar app.jar
